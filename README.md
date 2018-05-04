@@ -1,2 +1,5 @@
-# docker-swarm-vagrant
-Vagrantfile to setup Docker Swarm with 1 Manager, 2 Workers on Ubuntu 17.10
+# Docker Swarm Vagrant
+
+Vagrantfile to setup a Docker Swarm with 1 Manager and 2 Worker nodes.
+
+
