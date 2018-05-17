@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
     end
     
     config.vm.define "manager" do |box|
-        box.vm.box = "ubuntu/xenial64"
+        box.vm.box = "ubuntu/bionic64"
         box.vm.hostname = "manager"
         box.vm.network "private_network", ip: "#{manager_ip}"
         box.vm.provision "shell", path: "./setup.sh"
@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
 
   instances.each do |instance| 
     config.vm.define instance[:name] do |box|
-        box.vm.box = "ubuntu/xenial64"
+        box.vm.box = "ubuntu/bionic64"
         box.vm.hostname = instance[:name]
         box.vm.network "private_network", ip: "#{instance[:ip]}"
         box.vm.provision "shell", path: "./setup.sh"

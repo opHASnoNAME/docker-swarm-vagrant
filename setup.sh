@@ -2,6 +2,8 @@
 export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
 sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -9,9 +11,11 @@ sudo apt-get install \
     software-properties-common
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# yes we use 17.x repos
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
+   artful \
    stable"
 
 sudo apt-get update
