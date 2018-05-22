@@ -7,4 +7,5 @@
 - Ready to use Docker Swarm with 1 Manager and 2 Workers 
 - GlusterFS Server
 - Avahi Daemon
+- Prometheus Server with Grafana and AlertManager
 
