@@ -52,9 +52,9 @@ Vagrant.configure("2") do |config|
       box.vm.box = "ubuntu/bionic64"
       box.vm.hostname = "prometheus"
       box.vm.network "private_network", ip: "#{prometheus_ip}"
+      box.vm.provision "shell", path: "./setup.sh"
       box.vm.provision "file", source: "daemon.json", destination: "/tmp/daemon.json"
       box.vm.provision "shell", inline: "cat /tmp/daemon.json >> /etc/docker/daemon.json", privileged: true
-      box.vm.provision "shell", path: "./setup.sh"
     end
 
     instances.each do |instance| 
@@ -71,5 +71,4 @@ Vagrant.configure("2") do |config|
           box.vm.provision "shell", inline: "service docker restart"
       end 
     end
-
 end
