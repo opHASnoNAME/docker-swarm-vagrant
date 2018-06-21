@@ -8,4 +8,3 @@
 - GlusterFS Server
 - Avahi Daemon
 - Prometheus Server with Grafana and AlertManager
-
